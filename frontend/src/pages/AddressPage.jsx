@@ -50,7 +50,8 @@ export default class AddressPage extends Component {
             <div className="w-full border-2 border-black">
               <img src={`http://${window.location.hostname}:4000${nft.image}`} className="my-auto w-full" alt="" />
               <div className="p-2">
-                {nft.name}
+                <div className="">{nft.name}</div>
+                <div className="">Token ID = {nft.token_id}</div>
               </div>
             </div>
           </div>)}
