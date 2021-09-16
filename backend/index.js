@@ -20,7 +20,7 @@ const nftQueue = new NFTQueue(web3, 'bsc');
 db.authenticate()
   .then(() => {
     console.log('Successfully Connected to the database');
-    return db.sync({ force: true });
+    return db.sync();
   }).then(() => console.log('Synced Models'))
   .catch(err => console.log(`Error: ${err}`));
 
