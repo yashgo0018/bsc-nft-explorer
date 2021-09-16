@@ -48,7 +48,7 @@ export default class AddressPage extends Component {
         <div className="flex flex-wrap">
           {nfts.map(nft => <div key={nft.id} className="w-1/3 lg:w-1/4 p-2">
             <div className="w-full border-2 border-black">
-              <img src={'http://localhost:4000' + nft.image} className="my-auto w-full" alt="" />
+              <img src={`http://${window.location.hostname}:4000${nft.image}`} className="my-auto w-full" alt="" />
               <div className="p-2">
                 {nft.name}
               </div>
