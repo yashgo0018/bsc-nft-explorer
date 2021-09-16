@@ -16,7 +16,7 @@ export default class AddressPage extends Component {
     try {
       const { address } = this.props.match.params;
 
-      const { data: nfts } = await axios.get(`http://${location.hostname}:4000/address/${address}`);
+      const { data: nfts } = await axios.get(`http://${window.location.hostname}:4000/address/${address}`);
       this.setState({ nfts, address });
       const icon = `data:image/png;base64,${new Identicon(address, 100).toString()}`;
       this.setState({ icon })
