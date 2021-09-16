@@ -1,0 +1,4 @@
+.env
+node_modules/
+nfts/
+yarn-error.log
