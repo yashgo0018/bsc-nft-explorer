@@ -199,7 +199,7 @@ async function getImage(name, url) {
     // const buffer = await toBuffer(node.cat(url.slice(7)));
     // const fs = require('fs')
     // fs.writeFile(filePath, buffer, () => { });
-    await downloadImageOverHTTP(filePath, 'https://gateway.ipfs.io/ipfs/' + url.slice(7))
+    await downloadImageOverHTTP(filePath, 'https://nfxt.mypinata.cloud/ipfs/' + url.slice(7))
   } else {
     await downloadImageOverHTTP(filePath, url);
   }
@@ -216,7 +216,7 @@ async function getImage(name, url) {
 
 async function getMetadata(url) {
   if (url.startsWith('ipfs://')) {
-    return await axios({ method: 'get', url: 'https://gateway.ipfs.io/ipfs/' + url.slice(7), timeout: 1000 * 5 });
+    return await axios({ method: 'get', url: 'https://nfxt.mypinata.cloud/ipfs/' + url.slice(7), timeout: 1000 * 5 });
     // const stream = node.cat(url.slice(7));
     // let data = "";
     // for await (let chunk of stream) {
